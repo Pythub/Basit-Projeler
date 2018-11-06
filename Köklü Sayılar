@@ -1,0 +1,26 @@
+while True:
+    print("Kök Bulma Programı",  "\n", "-------------------", sep="")
+
+    a = int(input("Bir Tam Sayi Giriniz:" ))
+    c = int(input("Kök'ün Derecesini Giriniz:"))
+
+    while a>=0:
+
+        if a is 0:
+            if c is 0:
+                print("Sonuc:","Belirsiz", "\n", "-------------------", sep="")
+                break
+
+        if c is 0:
+            if a != 0:
+                print("Sonuc:","Tanımsız", "\n", "-------------------", sep="")
+                break
+
+
+        else:
+            b = a ** (1 / c)
+            print("Sonuc:", b, "\n", "-------------------", sep="")
+            break
+
+    else:
+        print("Lütfen Kök İçindeki Sayıya Sıfırdan Büyük Bir Değer Giriniz")
