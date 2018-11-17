@@ -1,0 +1,22 @@
+import time 
+
+
+metin = """
+Evde sizi karşı karşıya oturur buldum. Evvela hiçbir şey anlamadım. Sonra birdenbire ruhumun bütün çirkeflikleri boşandı. Fakat ne yapabilirdim? Kendi ruhunun pisliğini bu kadar yakından gören bir adam başkalarının temiz olacağına inanabilir mi?
+"""
+sayac = len(metin.split())
+
+while str(input('\nHazır olduğunda "tamam" yaz:')) != 'tamam':
+    str(input('\nNe zaman hazır olursan "tamam" yaz:'))
+
+baslangic = time.time()
+print("-"*40,sep="")
+girdi = str(input('"%s" \n Kelimeleri, mümkün olduğunca hızlı ve doğru yazın:' % metin))
+bitis = time.time()
+
+
+dogru = len(set(girdi.split()) & set(metin.split()))
+
+totalzaman = bitis - baslangic
+
+print ("\n","*" * 40,"\n""Süre:",round(totalzaman),"Saniye ||","Doğru Kelime Sayısı:", dogru,"||","\n","*" * 40,sep="")
